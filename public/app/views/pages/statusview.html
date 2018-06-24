@@ -1,0 +1,19 @@
+ <style>
+         .well-sm {
+             color: white;
+             background-color: MediumSlateBlue;
+         }
+    </style>
+<div class="page-header">
+<h1>Status updates</h1>
+</div>
+<button class="btn btn-primary" ng-click="stat.viewStatus();showDiv=true;" ng-show="!showDiv">Load Updates</button>
+<br><br><br>
+<div ng-repeat="x in stat.statusData">
+<div class="well-sm" ng-show="x.status">
+<p>Username: {{x.username}}</p>
+<p>Status:{{x.status}}</p>
+</div>
+<br>
+</div>
+
